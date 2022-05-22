@@ -1,8 +1,5 @@
 name: Create Archive
-on:
-  push:
-    tags:
-      - 'v*'
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,13 +10,13 @@ jobs:
       uses: thedoctor0/zip-release@main
       with:
         type: 'zip'
-        filename: 'release.zip'
-        exclusions: '*.git* /*node_modules/* .editorconfig'
+        filename: 'FC_Dungeons_Texture_Pack.zip'
+        exclusions: '*.git* .editorconfig .MD'
 
     - name: Upload Release
       uses: ncipollo/release-action@v1
       with:
-        artifacts: "release.zip"
+        artifacts: "FC_Dungeons_Texture_Pack.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
         tag_name: ${{ github.ref }}
         draft: true
