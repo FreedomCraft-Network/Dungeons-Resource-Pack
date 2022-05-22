@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "minecraft:custom_item/tome_blood_open"
+  },
+  "display": {
+    "firstperson_righthand": {
+	  "rotation": [ 0, 0, 0 ],
+	  "translation": [ -9, 0, 0 ]
+	},
+    "firstperson_lefthand": {
+	  "rotation": [ 0, -45, 0 ]
+	}
+  }
+}

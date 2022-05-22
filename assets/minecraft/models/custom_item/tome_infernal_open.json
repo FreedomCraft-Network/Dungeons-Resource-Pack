@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:custom_item/tome_infernal_open"
+  },
+  "display": {
+    "firstperson_righthand": {
+	  "rotation": [ 0, 0, 0 ],
+	  "translation": [ -9, 0, 0 ]
+	},
+    "firstperson_lefthand": {
+	  "rotation": [ 0, -45, 0 ]
+	}
+  }
+}
