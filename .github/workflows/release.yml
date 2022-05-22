@@ -18,6 +18,4 @@ jobs:
       with:
         artifacts: "FC_Dungeons_Texture_Pack.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
-        tag_name: ${{ github.ref }}
         draft: true
-        prerelease: ${{ contains(github.ref, 'beta') || contains(github.ref, 'alpha') }}
