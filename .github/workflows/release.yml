@@ -19,3 +19,4 @@ jobs:
         artifacts: "FC_Dungeons_Texture_Pack.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
         draft: true
+        tag: "release"
