@@ -11,7 +11,7 @@ jobs:
       with:
         type: 'zip'
         filename: 'FC_Dungeons_Texture_Pack.zip'
-        exclusions: '*.git* .editorconfig .MD'
+        exclusions: '*.git* *.MD'
 
     - name: Upload Release
       uses: ncipollo/release-action@v1
