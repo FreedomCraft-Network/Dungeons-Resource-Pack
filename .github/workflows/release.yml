@@ -1,0 +1,22 @@
+name: Create Archive
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    
+    - name: Archive Release
+      uses: thedoctor0/zip-release@main
+      with:
+        type: 'zip'
+        filename: 'FC_Dungeons_Texture_Pack.zip'
+        exclusions: '*.git* *.MD'
+
+    - name: Upload Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "FC_Dungeons_Texture_Pack.zip"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        draft: true
+        tag: "release"
