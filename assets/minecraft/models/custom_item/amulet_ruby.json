@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecraft:custom_item/necklace_diamond"
+    "layer0": "minecraft:custom_item/amulet_ruby"
   }
 }
