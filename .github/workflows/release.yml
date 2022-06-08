@@ -1,5 +1,8 @@
-name: Create Archive
-on: [push]
+name: Create Release
+on:
+  push:
+    tags:
+      - 'v*'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,4 +22,5 @@ jobs:
         artifacts: "FC_Dungeons_Texture_Pack.zip"
         token: ${{ secrets.GITHUB_TOKEN }}
         draft: true
-        tag: "release"
+        tag: ${{ github.ref }}
+        prerelease: ${{ contains(github.ref, 'beta') || contains(github.ref, 'alpha') }}
